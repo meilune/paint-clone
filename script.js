@@ -58,6 +58,8 @@ eraser.addEventListener('click', () => {
   activeToolEl.textContent = 'Eraser';
   currentColor = bucketColor;
   currentSize = 50;
+  brushSlider.value = 50;
+  displayBrushSize();
 });
 
 // // Switch back to Brush
