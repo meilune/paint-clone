@@ -20,7 +20,7 @@ let currentSize = 10;
 let bucketColor = '#FFFFFF';
 let currentColor = '#A51DAB';
 // let isEraser = false;
-// let isMouseDown = false;
+let isMouseDown = false;
 // let drawnArray = [];
 
 // Formatting Brush Size
@@ -39,9 +39,11 @@ let currentColor = '#A51DAB';
 // });
 
 // Setting Background Color
-// bucketColorBtn.addEventListener('change', () => {
-
-// });
+bucketColorBtn.addEventListener('change', () => {
+  bucketColor = bucketColorBtn.value;
+  console.log(bucketColor);
+  createCanvas();
+});
 
 // // Eraser
 // eraser.addEventListener('click', () => {
@@ -70,7 +72,6 @@ function createCanvas() {
   context.fillStyle = bucketColor;
   context.fillRect(0, 0, canvas.width, canvas.height);
   body.appendChild(canvas);
-
 }
 
 // // Clear Canvas
