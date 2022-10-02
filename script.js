@@ -189,13 +189,16 @@ loadStorageBtn.addEventListener('click', () => {
 
 });
 
-// // Clear Local Storage
-// clearStorageBtn.addEventListener('click', () => {
-
-//   // Active Tool
-//   activeToolEl.textContent = 'Local Storage Cleared';
-//   setTimeout(switchToBrush, 1500);
-// });
+// Clear Local Storage
+clearStorageBtn.addEventListener('click', () => {
+  // if (localStorage.getItem('savedCanvas')) {
+  localStorage.removeItem('savedCanvas');
+  createCanvas();
+  drawnArray = [];
+  // Active Tool
+  activeToolEl.textContent = 'Local Storage Cleared';
+  setTimeout(switchToBrush, 1500);
+});
 
 // // Download Image
 // downloadBtn.addEventListener('click', () => {
