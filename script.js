@@ -202,11 +202,8 @@ clearStorageBtn.addEventListener('click', () => {
 
 // Download Image
 downloadBtn.addEventListener('click', () => {
-  const link = document.createElement('a');
-  link.download = 'download.png';
-  link.href = canvas.toDataURL();
-  link.click();
-  link.delete;
+  downloadBtn.href = canvas.toDataURL('image/jpeg', 1);
+  downloadBtn.download = 'my-paint.jpg';
   // Active Tool
   activeToolEl.textContent = 'Image File Saved';
   setTimeout(switchToBrush, 1500);
